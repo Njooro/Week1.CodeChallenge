@@ -15,4 +15,4 @@ function calculatePAYE(basicSalary){
     return PAYE
 }
 //input the basic salary to find the value of the PAYE
-console.log(calculatePAYE(200000))
+console.log(calculatePAYE())
