@@ -69,3 +69,21 @@ function calculateNSSF(basicSalary){
 }
 // input basic salary to calculate the NSSF deductions
 console.log(calculateNSSF())
+
+//function to calculate the Net salary
+
+function calculateNetSalary(basicSalary){
+    const PAYE = calculatePAYE(basicSalary);
+    const NHIF = calculateNHIF(basicSalary);
+    const NSSF = calculateNSSF(basicSalary);
+    const netSalary = basicSalary - PAYE - NHIF - NSSF;
+    return {
+        PAYE,
+        NHIF,
+        NSSF,
+        netSalary
+    }
+    
+}
+//input to calcilate net salary and all the deductions
+console.log(calculateNetSalary())
